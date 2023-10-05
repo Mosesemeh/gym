@@ -152,3 +152,30 @@ section.about p{
     font-size: .8rem;
     line-height: 1.3rem;
 }
+section.services{
+    background-color: #000;
+    color: #fff;
+    margin-top: 50px;
+    padding: 50px 20px 0;
+    position: relative;
+}
+section.services .shadow-text{
+    color: rgba(225,225,225,.1);
+    z-index: 1;
+    left: 20px;
+    top: 10px;
+}
+section.services div.columns{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: flex-end;
+}
+.service{
+    margin: 50px 0;
+}
+.service .number{
+    font-size: 3rem;
+    font-weight: bold;
+    -webkit-text-stroke: 0.1px #fff;
+    color: #000;
+}
