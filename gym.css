@@ -9,6 +9,11 @@ img{
 h2{
     font-size: 2rem;
 }
+.center{
+    max-width: 780px;
+    margin: 0 auto;
+    position: relative;
+}
 body{
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
@@ -156,14 +161,14 @@ section.services{
     background-color: #000;
     color: #fff;
     margin-top: 50px;
-    padding: 50px 20px 0;
+    padding: 70px 20px 0;
     position: relative;
 }
 section.services .shadow-text{
     color: rgba(225,225,225,.1);
     z-index: 1;
-    left: 20px;
-    top: 10px;
+    left: 0;
+    top: -50px;
 }
 section.services div.columns{
     display: grid;
@@ -178,4 +183,70 @@ section.services div.columns{
     font-weight: bold;
     -webkit-text-stroke: 0.1px #fff;
     color: #000;
+}
+.serviec h3{
+    margin: 20px 0 10px;
+}
+.service p{
+    color: rgba(225,225,225,.5);
+    font-size: .8rem;
+    line-height: 1.2rem;
+}
+section.classes .shadow-text{
+    top: 50px;
+    left: -50px;
+    font-size: 5rem;
+}
+section.classes{
+    position: relative;
+    padding: 70px 20px;
+}
+.classes-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    margin-top: 30px;
+}
+.classes-grid .class{
+    box-shadow: 0 0 3px rgba(0,0,0,.1);
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    color: #000;
+    text-decoration: none;
+}
+.classes-grid .class:after{
+    content: '→';
+    position: absolute;
+    font-size: 2rem;
+    right: 10px;
+    top: 50%;
+    margin-top: -1rem;
+    color: #45c3c8;
+}
+.class time{
+    display: block;
+    font-size: .8rem;
+    margin-top: 7px;
+}
+section.facilities{
+    background: linear-gradient(90deg, #c2b0e0 60%, #7dd7d8);
+}
+section.facilities img{
+    border-top-right-radius: 120px;
+    border-bottom-right-radius: 120px;
+}
+section.facilities div.columns{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+section.facilities div.content{
+    padding: 10px 60px;
+    color: #fff;
+}
+section.facilities p{
+    margin: 20px 0;
+    font-size: .8rem;
 }
