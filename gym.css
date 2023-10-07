@@ -18,7 +18,7 @@ body{
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
 }
-a.btn, button{
+a.btn, button, .mobile-nav-btn{
     background-color: #222;
     color: #fff;
     padding: 12px 25px;
@@ -29,10 +29,12 @@ a.btn, button{
     cursor: pointer;
 }
 header{
+    padding: 20px;
+}
+header div.columns{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
 }
 header nav a{
     text-decoration: none;
@@ -40,14 +42,57 @@ header nav a{
     margin-right: 20px;
     position: relative;
 } 
-header nav a.active:before{
+header nav a span{
+    position: relative;
+}
+header nav a.active span:before{
     content: '';
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -2px;
+    bottom: -2px; 
     border-bottom: 10px solid #46C6CB;
     z-index: -1;
+}
+.mobile-nav-btn{
+    display: none;
+}
+#navCb{
+    display: none;
+}    
+@media screen and (max-width: 768px){
+    header{
+        padding: 0;
+    }
+    header div.columns{
+        display: block;
+        position: relative;
+        z-index: 10;
+        padding: 20px;
+    }
+    header nav a.active span:before{
+        bottom: -2px;
+        border-bottom-width: 15px;
+    }
+    header nav a{
+        display: block;  
+        font-size: 2rem;
+    }
+    .mobile-nav-btn{
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        display: inline-block;
+        transform: rotate(90deg);
+        padding: 10px;
+        z-index: 15;
+    }
+    #navCb:not(:checked) ~ div.columns{
+        display: block;
+    }
+    #navCb:checked ~ div.columns{
+        display: none;
+    }
 }
 section.intro{
     display: grid;
@@ -55,6 +100,14 @@ section.intro{
     padding: 0 20px;
     position:relative;
     gap: 50px;
+}
+@media screen and (max-width:768px){
+    section.intro{
+        grid-template-columns: 1fr;
+    }
+    .intro-picture{
+        display: none;
+    }
 }
 section.intro .content-column{
     padding-top: 25px;
@@ -103,9 +156,9 @@ section.intro div.circle{
     background: url(photo/dotC.png);
     position:absolute;
     z-index: -1;
-    right: -10px;
+    right: -100px;
+    top: 60px;
     opacity: 0.5;
-    top: -1px;
     width: 250px;
     height: 300px;
 }
@@ -117,7 +170,7 @@ form.intro-booking{
     background-color: #fff;
     align-items: center;
     box-shadow: 0 0 10px rgba(0,0,0.15);
-    margin: 0 20px;
+    margin: 0;
     border-radius: 5px;
     border: 3px solid #fff;
 }
@@ -132,6 +185,20 @@ form.intro-booking input{
     border: 0;
     padding: 5px 0;
     border-right: 1px solid #ddd;
+}
+@media screen and (max-width:768px){
+    form.intro-booking{
+        margin: 40px 20px 0;
+        grid-template-columns: 50px 1fr 50px 1fr;
+    }
+    form.intro-booking input{
+        border-right: 0;
+        border-bottom: 1px solid #ddd;
+    }
+    form.intro-booking button{
+        grid-column: 4;
+        margin-top: 3px;
+    }
 }
 section.about{
     display: grid;
@@ -157,6 +224,15 @@ section.about p{
     font-size: .8rem;
     line-height: 1.3rem;
 }
+@media screen and (max-width:768px){
+    section.about{
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    section.about img{
+        display: none;
+    }
+}
 section.services{
     background-color: #000;
     color: #fff;
@@ -181,7 +257,7 @@ section.services div.columns{
 .service .number{
     font-size: 3rem;
     font-weight: bold;
-    -webkit-text-stroke: 0.1px #fff;
+    -webkit-text-stroke: 0.8px #fff;
     color: #000;
 }
 .serviec h3{
@@ -191,6 +267,17 @@ section.services div.columns{
     color: rgba(225,225,225,.5);
     font-size: .8rem;
     line-height: 1.2rem;
+}
+@media screen and (max-width:768px){
+    section.services img{
+        display: none;
+    }
+    section.services div.columns{
+        grid-template-columns: 1fr;
+    }
+    .service{
+        margin: 20px 0;
+    }
 }
 section.classes .shadow-text{
     top: 50px;
@@ -230,6 +317,14 @@ section.classes{
     font-size: .8rem;
     margin-top: 7px;
 }
+@media screen and (max-width:768px){
+    .classes-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    .class time{
+        margin-right: 50px;
+    }
+}
 section.facilities{
     background: linear-gradient(90deg, #c2b0e0 60%, #7dd7d8);
 }
@@ -256,6 +351,22 @@ section.facilities div.shadow-text{
     color: rgba(225,225,225,.1);
     top: -50px;
     left: 20px;
+}
+@media screen and (max-width:768px){
+    section.facilities div.columns{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    section.facilities img{
+        border-radius: 120px;
+        box-sizing: border-box;
+        display: block;
+        margin: 2;
+    }
+    section.facilities div.content{
+        padding: 20px 0;
+    }
+    
 }
 section.team{
     padding: 80px 0 40px;
@@ -285,6 +396,14 @@ div.teams-members{
 .member h3{
     margin-top: 5px;
     margin-bottom: 5px;
+}
+@media screen and (max-width:768px){
+    section.team{
+        padding: 60px 20px;
+    }
+    div.teams-members{
+        grid-template-columns: 1fr;
+    }
 }
 section.trainer div.columns{
     display: grid;
@@ -335,6 +454,33 @@ section.trainer a{
 section.trainer img{
     display: block;
 }
+@media screen and (max-width:768px){
+    section.trainer div.columns{
+        grid-template-columns: 1fr;
+    }
+    section.trainer .square{
+        top: -50px;
+        left: -14px;
+        width: 140%;
+        height: 250%;
+        transform: rotate(0deg);
+    }
+    section.trainer div.content{
+        padding: 50px 20px;
+        position: relative;
+    }
+    section.trainer img{
+        z-index: 1;
+        border-radius: 120px;
+        padding: 0 20px;
+    }
+    section.trainer h2,p{
+        text-align: center;
+    }
+    section.trainer h2{
+        font-size: 3.5rem;
+    }
+}
 
 footer{
     background-color: #2f2f2f;
@@ -357,6 +503,7 @@ footer .links a{
     display: block;
     padding: 10px 0;
     text-decoration: none;
+    font-size: .8rem;
 }
 footer h4{
     margin-bottom: 20px;
@@ -365,7 +512,24 @@ footer a.logo{
     text-decoration: none;
     font-size: 2rem;
     text-transform: uppercase;
-    display: block;
+    display: inline-block;
     margin-bottom: 20px;
-    font-weight: 100;
+    font-weight: 50;
+    line-height: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+footer a.logo span{
+    font-weight: bold;
+    display: block;
+    font-size: 2.8rem;
+    text-align: center;
+    letter-spacing: 0px;
+} 
+footer p{
+    margin: 14px 0;
+    font-size: .8rem;
+    color: rgba(225,225,225,.7);
+}
+@media screen and (max-width:768px){
+    
 }
