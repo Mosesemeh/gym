@@ -21,8 +21,8 @@ body{
 a.btn, button, .mobile-nav-btn{
     background-color: #222;
     color: #fff;
-    padding: 12px 25px;
-    border: 0;
+    padding: 15px 15px;
+    border: 20px;
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
@@ -140,8 +140,9 @@ section.intro p{
 }
 @media screen and (max-width:768px){
     .shadow-text{
+        position: absolute;
         font-size: 5rem;
-        left: 10px;
+        left: 15px;
     }
 }
 section.intro div.circle{
@@ -195,7 +196,6 @@ form.intro-booking input{
 
 @media screen and (max-width:768px){
     form.intro-booking{
-        position: relative;
         margin: 40px 20px 0;
         grid-template-columns: 1fr;
     }
@@ -214,12 +214,18 @@ section.about{
     padding-right: 20px;
     margin-top: 120px;
     gap: 50px;
+    position: relative;
 }
 section.about div.shadow-text{
     top:-50px;
     left: -50px;
     z-index: 1;
     white-space: nowrap;
+}
+@media screen and (max-width:768px){
+    section.about div.shadow-text{
+        left: 10px;
+    }
 }
 
 section.about div:not(.shadow-text){
