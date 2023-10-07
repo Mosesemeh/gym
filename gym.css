@@ -131,12 +131,18 @@ section.intro p{
 .shadow-text{
     position: absolute;
     top: 30px;
-    left: -30px;
+    left: -20px;
     color: rgb(0,0,0,.05);
     font-size: 7rem;
     line-height: 6rem;
     z-index: -1;
     font-weight: bold;
+}
+@media screen and (max-width:768px){
+    .shadow-text{
+        font-size: 5rem;
+        left: 10px;
+    }
 }
 section.intro div.circle{
     width: 700px;
