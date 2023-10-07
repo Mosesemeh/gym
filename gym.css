@@ -533,6 +533,9 @@ footer p{
 @media screen and (max-width:768px){
     footer div.columns{
         grid-template-columns: 1fr;
-        padding: 20px;
+        padding: 0 130px;
+        align-content: center;
+        align-items: center;
+        text-align: center;
     }
 }
