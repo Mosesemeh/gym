@@ -189,7 +189,7 @@ form.intro-booking input{
 @media screen and (max-width:768px){
     form.intro-booking{
         margin: 40px 5px 0;
-        grid-template-columns: 50px 1fr 50px 1fr;
+        grid-template-columns: 1fr;
     }
     form.intro-booking input{
         border-right: 100px;
