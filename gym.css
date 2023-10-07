@@ -196,7 +196,7 @@ form.intro-booking input{
         border-bottom: 1px solid #ddd;
     }
     form.intro-booking button{
-        grid-column: 4;
+        grid-column: 2;
         margin-top: 3px;
     }
 }
@@ -533,7 +533,7 @@ footer p{
 @media screen and (max-width:768px){
     footer div.columns{
         grid-template-columns: 1fr;
-        padding: 0 130px;
+        padding: 0 100px;
         align-content: center;
         align-items: center;
         text-align: center;
