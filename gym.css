@@ -199,15 +199,14 @@ form.intro-booking input{
     form.intro-booking{
         margin: 40px 20px 0;
         grid-template-columns: 50px 1fr 50px 1fr;
-        position: relative;
+        /*position: relative;
         grid-auto-flow: row;
         max-width: 100%;
         overflow-x: scroll;
         overflow-y: visible;
         padding: 30px 0;
         overscroll-behavior-x: contain;
-        scroll-snap-type: x mandatory;
-        gap: 0;
+        scroll-snap-type: x mandatory;*/
     }
     form.intro-booking input{
         border-right: 0;
