@@ -192,7 +192,6 @@ form.intro-booking input{
     border: 0;
     padding: 15px 0;
     border-right: 1px solid #ddd;
-    max-width: 100px;
 }
 
 @media screen and (max-width:768px){
@@ -211,6 +210,7 @@ form.intro-booking input{
     form.intro-booking input{
         border-right: 0;
         border-bottom: 1px solid #ddd;
+        max-width: 100px;
     }
     form.intro-booking button{
         grid-column: 4;
