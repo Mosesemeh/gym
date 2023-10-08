@@ -216,7 +216,9 @@ form.intro-booking input{
         margin-top: 3px;
         position: absolute;
         top: 60px;
+        pad: 20px;
     }
+
 }
 section.about{
     display: grid;
