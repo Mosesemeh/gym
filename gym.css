@@ -202,10 +202,10 @@ form.intro-booking input{
         grid-auto-flow: row;
         max-width: 100%;
         overflow-x: scroll;
-        /*overflow-y: visible;
+        overflow-y: visible;
         padding-bottom: 50px;
         overscroll-behavior-x: contain;
-        scroll-snap-type: x mandatory;*/
+        scroll-snap-type: x mandatory;
     }
     form.intro-booking input{
         border-right: 0;
