@@ -197,7 +197,15 @@ form.intro-booking input{
 @media screen and (max-width:768px){
     form.intro-booking{
         margin: 40px 20px 0;
-        grid-template-columns: 1fr;
+        grid-template-columns: 50px 1fr 50px 1fr;
+        display: grid;
+        grid-auto-flow: row;
+        max-width: 100%;
+        overflow-x: scroll;
+        /*overflow-y: visible;
+        padding-bottom: 50px;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;*/
     }
     form.intro-booking input{
         border-right: 0;
