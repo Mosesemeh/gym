@@ -213,10 +213,7 @@ form.intro-booking input{
     }
     form.intro-booking button{
         grid-column: 4;
-        margin-top: 3px;
-        position: absolute;
-        top: 60px;
-        pad: 20px;
+        margin-top: 10px;
     }
 
 }
