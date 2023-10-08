@@ -494,7 +494,9 @@ section.trainer img{
     }
     section.trainer img{
         z-index: 1;
-        border-radius: 50px
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+        border-bottom: 0;
     }
     section.trainer h2,p{
         text-align: center;
